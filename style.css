@@ -1,0 +1,16 @@
+#mainbar{
+  height: 65px;
+}
+#buttons{
+  align: right;
+}
+body{
+  background-image: url('content/mainbackground.jpg');
+}
+
+@font-face{
+  font-family: 'CustomFont';
+}
+button.inv2{
+  text-align: center;
+}
