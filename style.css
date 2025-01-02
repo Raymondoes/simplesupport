@@ -14,3 +14,32 @@ body{
 button.inv2{
   text-align: center;
 }
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  background-color: #0f0f0f; /* Tailwind's bg-gray-50 */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.menu-header:hover {
+  background-color: #0f0f1f; /* Tailwind's bg-gray-100 */
+}
+
+.menu-content {
+  padding: 1rem;
+  color: gray; /* Tailwind's text-gray-600 */
+}
+
+.menu-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu-icon.rotate-180 {
+  transform: rotate(180deg);
+}
