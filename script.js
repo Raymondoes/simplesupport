@@ -1,3 +1,3 @@
 function homepage(){
-  location.replace(`simplesupport.html`);
+  location.replace(`index.html`);
 }
