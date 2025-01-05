@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expandable Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .slider-container {
+      margin: 20px;
+    }
+
+    .slider-button {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: 18px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      width: 200px;
+    }
+
+    .slider-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-top: none;
+      padding: 0 10px;
+    }
+
+    .slider-content.expanded {
+      max-height: 100px; /* Set a value large enough to fit the content */
+    }
+
+    .icon {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider-button" onclick="toggleSlider(this)">
+      <span class="icon">+</span> More Info
+    </div>
+    <div class="slider-content">
+      <p>This is the additional information that is revealed when the slider is expanded.</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleSlider(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.icon');
+      
+      if (content.classList.contains('expanded')) {
+        content.classList.remove('expanded');
+        icon.textContent = '+'; // Switch icon to "+"
+      } else {
+        content.classList.add('expanded');
+        icon.textContent = '-'; // Switch icon to "-"
+      }
+    }
+  </script>
+</body>
+</html>

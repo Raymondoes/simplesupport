@@ -6,7 +6,13 @@ function invbut2(){
 }
 function guidelines(){
   location.replace('guidelines.html');
-} 
+}
+function discinv(){
+  location.replace(`https://discord.gg/MEAsNfnW6w`);
+}
+function feats(){
+  document.getElementById(`info`).scrollIntoView();
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const menuItems = document.querySelectorAll(".menu-item");
